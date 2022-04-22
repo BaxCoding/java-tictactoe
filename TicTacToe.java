@@ -6,36 +6,11 @@ public class TicTacToe {
     public static void main(String[] args) {
         
             System.out.println("\nLet's play tic tac toe");
-
-            //Task 1: Create an array with three rows of '_' characters.
-            char[][] board = {{'_','_','_'}, {'_','_','_'}, {'_','_','_'}};
-
-            //Task 2: Call the function printBoard();
+            
+            char[][] board = {{'_','_','_'}, {'_','_','_'}, {'_','_','_'}};           
 
             printBoard(board);
-
              
-              /*
-              {  Task 3: Loop through turns.
-
-                  if (X) turn {
-                     Task 4: call askUser(). 
-                     Task 5: populate the board using askUser's return value.
-                  } else {
-                      Task 4: call askUser(). 
-                      Task 5: populate the board using askUser's return value. Then, print it.
-
-                  }
-
-                Task 6 - Call the function.
-                   if return value == 3 {
-                     print: X wins and break the loop
-                  } else if return value == -3 {
-                     print: O wins and break the loop
-                  }
-
-              } 
-              */
               for (int i = 0; i < 9; i++) {
 
                 if (i % 2 == 0) {
@@ -67,8 +42,8 @@ public class TicTacToe {
         }
 
 
-    /** Task 2 - Write a function that prints the board.
-     * Function name - printBoard()
+ 
+    /* Function name - printBoard()
      * @param board (char[][])
      * 
      * Inside the function:
@@ -87,8 +62,8 @@ public class TicTacToe {
       }
     }   
 
-   /** Task 4 - Write a function that lets the user choose a spot
-     * Function name – askUser
+  
+     /* Function name – askUser
      * @param board (char[][] board)
      * @return spot (int[])
      * 
@@ -114,8 +89,8 @@ public class TicTacToe {
     }
     
 
-    /** Task 6 - Write a function that determines the winner
-     * Function name - checkWin 
+   
+     /* Function name - checkWin 
      * @param board (char[][])
      * @return count (int)
      * 
@@ -126,9 +101,8 @@ public class TicTacToe {
      *   4. Check the left diagonal for a straight X or straight O (Task 9).
      *   5. Check the right diagonal for a straight X or straight O (Task 10).
      */
-    public static int checkWin(char[][] board) {
-        
-      //Check each of 3 rows
+    public static int checkWin(char[][] board) {       
+     
       int count = 0;
 
       for (int i = 0; i < board.length; i++) {
