@@ -70,8 +70,7 @@ public class TicTacToe {
      * Inside the function
      *   1. Asks the user: - pick a row and column number: 
      *   2. Check if the spot is taken. If so, let the user choose again.
-     *   3. Return the row and column in an int[] array.
-     * 
+     *   3. Return the row and column in an int[] array.     * 
      */
     public static int[] askUser(char[][] board) {
       System.out.println("\nPick a row and column number: ");
