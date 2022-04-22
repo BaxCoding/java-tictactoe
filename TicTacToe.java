@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class TicTacToe {
 
     static Scanner scan = new Scanner(System.in);
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {        
             System.out.println("\nLet's play tic tac toe");
             
             char[][] board = {{'_','_','_'}, {'_','_','_'}, {'_','_','_'}};           
@@ -12,13 +11,11 @@ public class TicTacToe {
             printBoard(board);
              
               for (int i = 0; i < 9; i++) {
-
                 if (i % 2 == 0) {
                     System.out.println("Turn: X");
                     int[] spot = askUser(board);
                     board[spot[0]][spot[1]] = 'X';
                     printBoard(board);
-
                 } else {
                     System.out.println("Turn: O");
                     int[] spot = askUser(board);
@@ -34,14 +31,10 @@ public class TicTacToe {
                     break;
                 } else if (i == 8) {
                     System.out.println("It's a tie!");
-                }
-    
+                }    
             }
-
             scan.close();
         }
-
-
  
     /* Function name - printBoard()
      * @param board (char[][])
@@ -61,8 +54,7 @@ public class TicTacToe {
         System.out.print("\n");
       }
     }   
-
-  
+    
      /* Function name – askUser
      * @param board (char[][] board)
      * @return spot (int[])
@@ -85,9 +77,7 @@ public class TicTacToe {
 
       int[] spot = {row, column};
       return spot;
-    }
-    
-
+    }  
    
      /* Function name - checkWin 
      * @param board (char[][])
@@ -100,8 +90,7 @@ public class TicTacToe {
      *   4. Check the left diagonal for a straight X or straight O (Task 9).
      *   5. Check the right diagonal for a straight X or straight O (Task 10).
      */
-    public static int checkWin(char[][] board) {       
-     
+    public static int checkWin(char[][] board) {     
       int count = 0;
 
       for (int i = 0; i < board.length; i++) {
@@ -117,7 +106,6 @@ public class TicTacToe {
           } else {
               count = 0;
           }
-
       }
 
       for (int i = 0; i < 3; i++) {
@@ -157,9 +145,6 @@ public class TicTacToe {
               count--; //count each O as -1. 
           }
       }
-
       return count;
   }
-
-
 }
